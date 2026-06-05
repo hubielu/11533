@@ -231,16 +231,16 @@ CS 153's AI policy explicitly encourages AI tool use *and* requires disclosure. 
 
 | Phase | Tool | What it did | Human role |
 |---|---|---|---|
-| Idea exploration | ChatGPT (web) | Brainstorm of CS153 directions building on summer research; helped narrow to encoder-decoder + multi-material conditioning. | I evaluated and rejected most suggestions; pivoted to the framing in §1. |
-| Milestone scaffold | Claude (this conversation) | Drafted initial directory structure, README skeleton, and Q1–Q5 milestone answers. | I provided full project context, made the decision to use prior summer research as the seed, and signed off on the framing. |
-| Compact-model physics | Hand-written | The subthreshold + saturation form in `src/data/synthetic.py` is hand-implemented from first principles + the textbook I read with Rob. | — |
+| Idea exploration | ChatGPT (web) | Brainstorm of CS153 directions; helped narrow to encoder-decoder + multi-material conditioning. | I evaluated and rejected most suggestions; pivoted to the framing in §1. |
+| Milestone scaffold | Claude (this conversation) | Drafted initial directory structure, README skeleton, and Q1–Q5 milestone answers. | I provided full project context and signed off on the framing. |
+| Compact-model physics | Hand-written | The subthreshold + saturation form in `src/data/synthetic.py` is hand-implemented from first principles + a textbook I read. | — |
 | NumPy model | Claude | Generated the initial `numpy_model.py` skeleton (forward + Adam + backward). | I requested specifications (single-file, Adam, sigmoid-on-params, JSON-serializable); reviewed and ran. |
 | Ablation runner | Claude | Initial draft of `src/eval/benchmarks.py`. | I dictated the 4 experiments (conditioning, recon, latent sweep, anomaly) and the report format. |
 | Browser demo | Claude | Initial HTML/CSS/JS template, including the JS forward-pass port of the NumPy model. | I dictated the layout, design system, the requirement that inference runs in-browser with no server, and the perturbation-slider concept. |
 | README + docs | Claude | Initial drafts of this README, the architecture SVG, and the video script. | I rewrote sections, set the structure, and added the honest-disclosure section. |
 | Sentaurus loader | Hand-written (from `.plt` examples in my summer Slack with Rob) | Real .plt parsing logic for production data path. | — |
 
-**What was *not* AI-generated:** the underlying research direction, the choice of summer-research foundation, the decision to add multi-material conditioning, the architecture choice of "encoder-decoder with metadata conditioning + reconstruction = anomaly score", and the experimental design. AI was a fast typist and a sounding board; the project's claim to novelty rests on my judgment about which direction to push the summer work.
+**What was *not* AI-generated:** the underlying research direction, the choice of research foundation, the decision to add multi-material conditioning, the architecture choice of "encoder-decoder with metadata conditioning + reconstruction = anomaly score", and the experimental design. AI was a fast typist and a sounding board; the project's claim to novelty rests on my judgment about which direction to push this work
 
 A more granular log lives in `docs/ai_disclosure.md`.
 
